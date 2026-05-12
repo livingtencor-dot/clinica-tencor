@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Tencor - Cardiologia e Laboratório</title>
+    <!-- Favicon (Opcional: Adicione o link do logo aqui) -->
+    <link rel="icon" type="image/png" href="https://link-do-seu-logo.png">
+    
+    <style>
+        /* DEFINIÇÃO DA PALETA DE CORES */
+        :root {
+            --vinho: #8B0000;
+            --azul-marinho: #002B5B;
+            --rosa-vibrante: #D62976; /* Cor do botão do Instagram */
+            --off-white: #FAF9F6;
+            --texto-escuro: #333;
+            --texto-claro: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: var(--texto-escuro); 
+            background-color: var(--off-white); 
+        }
+
+        /* CABEÇALHO */
+        header { 
+            background: white; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+
+        .logo-area img { height: 50px; }
+
+        nav a { 
+            margin-left: 20px; 
+            text-decoration: none; 
+            color: var(--azul-marinho); 
+            font-weight: 600; 
+            font-size: 0.9rem;
+        }
+
+        .btn-cta { 
+            background: var(--rosa-vibrante); 
+            color: white !important; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: 0.3s;
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 100px 5%; 
+            text-align: center; 
+        }
+
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; color: #fff; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+
+        /* SEÇÃO SERVIÇOS */
+        .servicos { padding: 60px 5%; text-align: center; }
+        .servicos h2 { color: var(--vinho); margin-bottom: 40px; }
+        .grid-servicos { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            border-bottom: 4px solid var(--azul-marinho); 
+        }
+
+        .card h3 { color: var(--vinho); margin-bottom: 15px; }
+
+        /* CORPO CLÍNICO */
+        .equipe { padding: 60px 5%; background: white; text-align: center; }
+        .grid-equipe { 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; 
+            flex-wrap: wrap; 
+            margin-top: 30px; 
+        }
+
+        .medico-card { width: 250px; }
+        .medico-card img { width: 100%; border-radius: 50%; border: 5px solid var(--rosa-vibrante); }
+        .medico-card h4 { margin-top: 15px; color: var(--azul-marinho); }
+
+        /* RODAPÉ */
+        footer { background: var(--azul-marinho); color: white; padding: 60px 5% 20px; text-align: center; }
+        
+        .footer-content { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            text-align: left; 
+            padding-bottom: 40px;
+        }
+
+        .legal-info { 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            padding-top: 30px; 
+            font-size: 0.85rem; 
+            color: rgba(255,255,255,0.7); 
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <!-- Insira o link da imagem do seu logo abaixo -->
+            <strong style="color: var(--azul-marinho); font-size: 1.5rem;">CLÍNICA TENCOR</strong>
+        </div>
+        <nav>
+            <a href="#servicos">SERVIÇOS</a>
+            <a href="#equipe">EQUIPE</a>
+            <a href="#contatos">CONTATOS</a>
+            <a href="https://wa.me/5587999078468" class="btn-cta">AGENDAR CONSULTA</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O Cuidado que seu Coração Merece</h1>
+        <p>Atendimento humanizado e tecnologia avançada para a saúde da sua família em Serra Talhada e Floresta.</p>
+    </section>
+
+    <section class="servicos" id="servicos">
+        <h2>O Que Oferecemos</h2>
+        <div class="grid-servicos">
+            <div class="card">
+                <h3>Cardiologia</h3>
+                <p>Consultas, Eletrocardiograma, Ecocardiograma e acompanhamento completo.</p>
+            </div>
+            <div class="card">
+                <h3>Laboratório</h3>
+                <p>Exames de sangue, perfil lipídico, exames hormonais e check-ups preventivos.</p>
+            </div>
+            <div class="card">
+                <h3>Diagnóstico</h3>
+                <p>MAPA, Holter, Ultrassonografia de carótidas e diagnósticos por imagem.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipe" id="equipe">
+        <h2>Nosso Corpo Clínico</h2>
+        <div class="grid-equipe">
+            <div class="medico-card">
+                <img src="https://via.placeholder.com/200" alt="Dra. Izanilda Menezes">
+                <h4>Dra. Izanilda Menezes</h4>
+                <p>Cardiologista e Ecocardiografista</p>
+            </div>
+            <div class="medico-card">
+                <img src="https://via.placeholder.com/200" alt="Dra. Ana Paula Melo">
+                <h4>Dra. Ana Paula Melo</h4>
+                <p>Cardiologia Clínica e Preventiva</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contatos">
+        <div class="footer-content">
+            <div>
+                <h3>Clínica Tencor</h3>
+                <p>Cuidando da sua saúde com excelência e tecnologia.</p>
+            </div>
+            <div>
+                <h4>Unidade Serra Talhada</h4>
+                <p>(87) 98150-7690</p>
+                <p>(87) 99907-8468</p>
+            </div>
+            <div>
+                <h4>Unidade Floresta</h4>
+                <p>(87) 99916-3268</p>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <p><strong>Tencor Serviços Médicos Especializados Ltda</strong></p>
+            <p>CNPJ: 20.352.426/0001-11</p>
+            <p>Diretor Técnico: <strong>Dr. Waldir Tenório</strong> | CRM/PE 22103 | RQE 18738</p>
+            <p style="margin-top: 20px;">© 2026 Clínica Tencor. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5587999078468" class="whatsapp-float" target="_blank">
+        <i class="fa fa-whatsapp"></i> WP
+    </a>
+
+</body>
+</html>
